@@ -122,6 +122,7 @@ Kết quả:
 
 https://www.geeksforgeeks.org/queue-cpp-stl/
 
+**Tìm hiểu thêm**: Deque, map, set, ...
 ### 2. BackTracking 
 Backtracking là một kỹ thuật giải quyết vấn đề trong lập trình, thường được sử dụng để tìm kiếm tất cả các giải pháp của một vấn đề. Kỹ thuật này thường được sử dụng trong các bài toán liên quan đến xây dựng tập hợp con, sắp xếp, duyệt đồ thị, phân tích cú pháp, v.v.
 
@@ -329,7 +330,7 @@ int main() {
 
 Ta đặt $f[i]$ là độ dài của dãy con không giảm dài nhất kết thúc ở $a_i$. $f[i]$ là trạng thái của bài toán. Ta khởi tạo $f[i]=1$ (chính nó là một dãy không giảm).
 
-Với $j$ $<$ $i$ mà $a_j≥a_i$ thì ta có thể thêm $a_i$ vào dãy không giảm kết thúc ở $a_j$, do đó nếu $f[j]+1$ lớn hơn giá trị hiện tại của $f[i]$ thì ta cập nhật $f[i]=f[j]+1$.
+Với $j<i$ mà $a_j≥a_i$ thì ta có thể thêm $a_i$ vào dãy không giảm kết thúc ở $a_j$, do đó nếu $f[j]+1$ lớn hơn giá trị hiện tại của $f[i]$ thì ta cập nhật $f[i]=f[j]+1$.
 
 Cuối cùng để tìm được độ dài dãy con không giảm dài nhất ta tính $max(f[1],f[2],…,f[n])$.
 ##### Code tham khảo 
